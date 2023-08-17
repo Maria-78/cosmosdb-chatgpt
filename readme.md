@@ -8,7 +8,7 @@ products:
 name: Sample chat app using Azure Cosmos DB for NoSQL and Azure OpenAI
 urlFragment: chat-app
 description: Sample application that implements multiple chat threads using the Azure OpenAI "text-davinci-003" model and Azure Cosmos DB for NoSQL for storage.
-azureDeploy: https://raw.githubusercontent.com/azure-samples/cosmosdb-chatgpt/main/azuredeploy.json
+azureDeploy: https://raw.githubusercontent.com/Maria-78/cosmosdb-chatgpt/main/azuredeploy.json
 ---
 
 # Azure Cosmos DB + OpenAI ChatGPT
