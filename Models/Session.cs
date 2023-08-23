@@ -23,6 +23,7 @@ public record Session
     [JsonIgnore]
     public List<Message> Messages { get; set; }
 
+    /*
     public Session()
     {
         Id = Guid.NewGuid().ToString();
@@ -32,6 +33,17 @@ public record Session
         Name = "New Chat";
         Messages = new List<Message>();
     }
+    */
+    public Session()
+    {
+        string Id = ClaimsPrincipal.Current.FindFirst("http://schemas.microsoft.com/identity/claims/objectidentifier").Value;
+        Type = nameof(Session);
+        SessionId = this.Id;
+        TokensUsed = 0;
+        Name = "New Chat";
+        Messages = new List<Message>();
+    }
+
 
     public void AddMessage(Message message)
     {
